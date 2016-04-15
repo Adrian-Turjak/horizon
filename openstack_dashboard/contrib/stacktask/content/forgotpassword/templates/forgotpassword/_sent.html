@@ -1,0 +1,14 @@
+{% extends "horizon/common/_modal_form.html" %}
+{% load i18n %}
+{% load url from future %}
+
+{% block modal-header %}{% trans "Forgot password" %}{% endblock %}
+{% block modal_class %}login{% endblock %}
+
+{% block modal-body %}
+    {% trans "A password reset link has been sent to you, provided an account exists for your email address." %}
+{% endblock %}
+
+{% block modal-footer %}
+    <a href="/">{% trans "Back to log in" %}</a>
+{% endblock %}

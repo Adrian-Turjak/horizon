@@ -4,9 +4,13 @@
     "service_or_admin": "rule:admin_required or rule:service_role",
     "owner" : "user_id:%(user_id)s",
     "admin_or_owner": "rule:admin_required or rule:owner",
+    "project_mod": "role:project_mod",
+    "project_admin": "role:project_admin",
+    "project_mod_or_admin": "rule:admin_required or rule:project_mod or rule:project_admin",
 
     "default": "rule:admin_required",
 
+    "identity:project_users_access": "rule:project_mod_or_admin",
     "identity:get_region": "",
     "identity:list_regions": "",
     "identity:create_region": "rule:admin_required",

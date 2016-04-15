@@ -33,6 +33,12 @@ urlpatterns = patterns(
     '',
     url(r'^$', 'openstack_dashboard.views.splash', name='splash'),
     url(r'^api/', include('openstack_dashboard.api.rest.urls')),
+    url(r'^token/',
+        include('openstack_dashboard.contrib.stacktask.' +
+                'content.token.urls')),
+    url(r'^forgot-password/',
+        include('openstack_dashboard.contrib.stacktask.' +
+                'content.forgotpassword.urls')),
     url(r'', include(horizon.urls)),
 )
 

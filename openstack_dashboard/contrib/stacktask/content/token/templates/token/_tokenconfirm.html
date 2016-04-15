@@ -1,0 +1,13 @@
+{% extends "horizon/common/_modal_form.html" %}
+{% load i18n %}
+{% load url from future %}
+
+{% block modal-header %}{% trans "Confirm project invitation" %}{% endblock %}
+{% block modal_class %}login{% endblock %}
+
+{% block modal-body %}You have been invited to join a project.{% endblock %}
+{% block form_action %}{% url 'token_verify' token=token %}{% endblock %}
+
+{% block modal-footer %}
+    <button id="tokenBtn" type="submit" class="btn btn-primary">{% trans "Accept Invitation" %}</button>
+{% endblock %}

@@ -1,51 +1,17 @@
 =============================
-Horizon (OpenStack Dashboard)
+StackTask Horizon
 =============================
 
-Horizon is a Django-based project aimed at providing a complete OpenStack
-Dashboard along with an extensible framework for building new dashboards
-from reusable components. The ``openstack_dashboard`` module is a reference
-implementation of a Django site that uses the ``horizon`` app to provide
-web-based interactions with the various OpenStack projects.
+This is a port of Catalyst's dashboard changes to Horizon as done for StackTask.
 
-* Release management: https://launchpad.net/horizon
-* Blueprints and feature specifications: https://blueprints.launchpad.net/horizon
-* Issue tracking: https://bugs.launchpad.net/horizon
+This repo is to be used in conjunction with: https://github.com/catalyst/stacktask
 
+There is a guide in that repo with a step by step guide to getting this repo working alongside StackTask in a devstack install.
 
-Using Horizon
-=============
-
-See ``doc/source/topics/install.rst`` about how to install Horizon
-in your OpenStack setup. It describes the example steps and
-has pointers for more detailed settings and configurations.
-
-It is also available at http://docs.openstack.org/developer/horizon/topics/install.html.
-
-Getting Started for Developers
+Example Screenshots:
 ==============================
-
-``doc/source/quickstart.rst`` or
-http://docs.openstack.org/developer/horizon/quickstart.html
-describes how to setup Horizon development environment and start development.
-
-Building Contributor Documentation
-==================================
-
-This documentation is written by contributors, for contributors.
-
-The source is maintained in the ``doc/source`` directory using
-`reStructuredText`_ and built by `Sphinx`_
-
-.. _reStructuredText: http://docutils.sourceforge.net/rst.html
-.. _Sphinx: http://sphinx-doc.org/
-
-* Building Automatically::
-
-    $ ./run_tests.sh --docs
-
-* Building Manually::
-
-    $ tools/with_venv.sh sphinx-build doc/source doc/build/html
-
-Results are in the ``doc/build/html`` directory
+.. image:: https://raw.githubusercontent.com/Adrian-Turjak/horizon/stable/mitaka/screenshots/StackTask_Horizon_1.png
+.. image:: https://raw.githubusercontent.com/Adrian-Turjak/horizon/stable/mitaka/screenshots/StackTask_Horizon_2.png
+.. image:: https://raw.githubusercontent.com/Adrian-Turjak/horizon/stable/mitaka/screenshots/StackTask_Horizon_3.png
+.. image:: https://raw.githubusercontent.com/Adrian-Turjak/horizon/stable/mitaka/screenshots/StackTask_Horizon_4.png
+.. image:: https://raw.githubusercontent.com/Adrian-Turjak/horizon/stable/mitaka/screenshots/StackTask_Horizon_5.png

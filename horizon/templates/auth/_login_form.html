@@ -51,8 +51,12 @@
           </div>
         {% endif  %}
         {% if request.COOKIES.logout_reason %}
-          <div class="form-group clearfix error help-block alert alert-danger" id="logout_reason">
-            <p>{{ request.COOKIES.logout_reason }}</p>
+          <div class="form-group clearfix error" id="logout_reason">
+            {% if 'success' in request.COOKIES.logout_reason_class %}
+            <span class="help-block alert alert-success"><p>{{ request.COOKIES.logout_reason }}</p></span>
+            {% else %}
+            <span class="help-block alert alert-danger"><p>{{ request.COOKIES.logout_reason }}</p></span>
+            {% endif %}
           </div>
         {% endif %}
         {% if next %}
@@ -70,6 +74,7 @@
           <span ng-hide="auth_type==='credentials'" ng-cloak>{% trans "Connect" %}</span>
         </button>
         <div class="clearfix"></div>
+        <p>Can't log in? <a href="{% url 'forgot-index' %}">Reset your password</a>.</p>
       {% endblock %}
     </div>
   </div>
